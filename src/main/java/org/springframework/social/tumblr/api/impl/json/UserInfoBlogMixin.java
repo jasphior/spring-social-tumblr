@@ -9,6 +9,10 @@ public class UserInfoBlogMixin {
   @JsonProperty("ask_anon")
   private boolean askAnon;
   
+  @JsonProperty("facebook")
+  @JsonDeserialize(using = BooleanYNDeserializer.class)
+  private boolean facebook;
+  
   @JsonProperty("facebook_opengraph_enabled")
   @JsonDeserialize(using = BooleanYNDeserializer.class)
   private boolean facebookOpengraphEnabled;
